@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechMart</title>
+    <link rel="stylesheet" href="techmart.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <img src="Assets/Images/TechMart_Logo.png" alt="TechMart Logo" />
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, and categories..." />
+                <button aria-label="Search">
+                    <img src="https://img.icons8.com/ios-filled/24/000000/search--v1.png" alt="Search Icon" />
+                </button>
+            </div>
+            <div class="user-actions">
+                <a href="#" class="login-signup">Login / Signup</a>
+                <button class="cart-button" aria-label="My Cart">
+                    <img src="https://img.icons8.com/ios-filled/24/000000/shopping-cart.png" alt="Cart Icon" />
+                    <span>My Cart</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="category-nav">
+            <ul>
+                <li><a href="#">All Categories &#9776;</a></li>
+                <li><a href="#">Computers & Laptops</a></li>
+                <li><a href="#">Mobile Phones & Tablets</a></li>
+                <li><a href="#">Computer Components and Hardware</a></li>
+                <li><a href="#">Peripherals and Accessories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="hero-carousel">
+    <div class="carousel-container">
+        <div class="slides">
+            <div class="slide" style="background-color: #e74c3c; height: 400px; width: 100%;">
+                <div class="slide-content">
+                    <h2>Welcome to TechMart</h2>
+                    <p>Your one-stop shop for all tech needs</p>
+                    <a href="#" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide" style="background-color: #3498db; height: 400px; width: 100%;">
+                <div class="slide-content">
+                    <h2>Latest Gadgets</h2>
+                    <p>Discover the newest technology</p>
+                    <a href="#" class="cta-button">Explore</a>
+                </div>
+            </div>
+            <div class="slide" style="background-color: #f1c40f; height: 400px; width: 100%;">
+                <div class="slide-content">
+                    <h2>Special Offers</h2>
+                    <p>Limited time deals on popular items</p>
+                    <a href="#" class="cta-button">View Deals</a>
+                </div>
+            </div>
+            <div class="slide" style="background-color: #9b59b6; height: 400px; width: 100%;">
+                <div class="slide-content">
+                    <h2>Gaming Essentials</h2>
+                    <p>Level up your gaming experience</p>
+                    <a href="#" class="cta-button">Game On</a>
+                </div>
+            </div>
+            <div class="slide" style="background-color: #1abc9c; height: 400px; width: 100%;">
+                <div class="slide-content">
+                    <h2>Smart Home Solutions</h2>
+                    <p>Transform your living space</p>
+                    <a href="#" class="cta-button">Discover</a>
+                </div>
+            </div>
+        </div>
+        
+        <button class="hero-arrow left" aria-label="Previous slide">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Previous">
+        </button>
+        <div class="hero-controls">
+            <div class="hero-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        <button class="hero-arrow right" aria-label="Next slide">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+<div class="content-container">
+<section class="latest-deals">
+    <div class="deals-header">
+        <h2>Latest Deals</h2>
+        <a href="#" class="view-more">View more</a>
+    </div>
+    <div class="deals-carousel">
+        <button class="deals-arrow left" aria-label="Previous deal">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Previous">
+        </button>
+        <div class="deals-items">
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/LD_1.png" alt="Acer Aspire 5" />
+                </div>
+                <div class="deal-title">
+                    <h3>Acer Aspire 5 (15.6" Ryzen 5)</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱30,999 <span class="old-price">₱34,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱4,000 OFF (11%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/LD_2.png" alt="iPhone 13 (128GB)" />
+                </div>
+                <div class="deal-title">
+                    <h3>iPhone 13 (128GB)</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱47,990 <span class="old-price">₱50,990</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱3,000 OFF + Installment Available</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/LD_3.png" alt="Razer DeathAdder Essential Gaming Mouse" />
+                </div>
+                <div class="deal-title">
+                    <h3>Razer DeathAdder Essential Gaming Mouse</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱1,599 <span class="old-price">₱1,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱400 OFF (20%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/LD_4.png" alt="Huawei Watch Fit 2" />
+                </div>
+                <div class="deal-title">
+                    <h3>Huawei Watch Fit 2</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱5,799 <span class="old-price">₱6,490</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱700 OFF + FREE Strap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="deals-arrow right" aria-label="Next deal">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+<section class="recommended-for-you">
+    <div class="deals-header">
+        <h2>Recommended For You</h2>
+        <a href="#" class="view-more">View more</a>
+    </div>
+    <div class="deals-carousel">
+        <button class="deals-arrow left" aria-label="Previous recommended item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Previous">
+        </button>
+        <div class="deals-items">
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/RFY_1.png" alt="Havit Laptop Cooling Stand with Dual Fans" />
+                </div>
+                <div class="deal-title">
+                    <h3>Havit Laptop Cooling Stand with Dual Fans</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱699 <span class="old-price">₱999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱300 OFF (30%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/RFY_2.png" alt="Romoss Sense 8+ 30000mAh Power Bank" />
+                </div>
+                <div class="deal-title">
+                    <h3>Romoss Sense 8+ 30000mAh Power Bank</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱1,399 <span class="old-price">₱1,899</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱500 OFF (26%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/RFY_3.png" alt="SoundPEATS Air3 Wireless Earbuds" />
+                </div>
+                <div class="deal-title">
+                    <h3>SoundPEATS Air3 Wireless Earbuds</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱1,599 <span class="old-price">₱2,199</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱600 OFF (27%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/RFY_4.png" alt="Redragon K552 RGB Mechanical Keyboard" />
+                </div>
+                <div class="deal-title">
+                    <h3>Redragon K552 RGB Mechanical Keyboard</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱2,249 <span class="old-price">₱2,799</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱550 OFF (20%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="deals-arrow right" aria-label="Next recommended item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+<section class="newly-released">
+    <div class="deals-header">
+        <h2>Newly Released</h2>
+        <a href="#" class="view-more">View more</a>
+    </div>
+    <div class="deals-carousel">
+        <button class="deals-arrow left" aria-label="Previous newly released item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Previous">
+        </button>
+        <div class="deals-items">
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/NR_1.png" alt="Nvidia GeForce RTX 5060 GPU" />
+                </div>
+                <div class="deal-title">
+                    <h3>Nvidia GeForce RTX 5060 GPU</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱22,500 <span class="old-price">₱25,000</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱2,500 OFF (10%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/NR_2.png" alt="Huawei Mate XT Tri-Fold Smartphone" />
+                </div>
+                <div class="deal-title">
+                    <h3>Huawei Mate XT Tri-Fold Smartphone</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱149,999 <span class="old-price">₱159,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱10,000 OFF (6%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/NR_3.png" alt="Xbox Series X (2TB, Galaxy Black Special Edition)" />
+                </div>
+                <div class="deal-title">
+                    <h3>Xbox Series X (2TB, Galaxy Black Special Edition)</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱31,999 <span class="old-price">₱34,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱3,000 OFF (9%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/NR_4.png" alt="Acer FreeSense Smart Ring" />
+                </div>
+                <div class="deal-title">
+                    <h3>Acer FreeSense Smart Ring</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱10,800 <span class="old-price">₱12,000</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱1,200 OFF (10%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="deals-arrow right" aria-label="Next newly released item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+<section class="trending-now">
+    <div class="deals-header">
+        <h2>Trending Now</h2>
+        <a href="#" class="view-more">View more</a>
+    </div>
+    <div class="deals-carousel">
+        <button class="deals-arrow left" aria-label="Previous trending item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-left.png" alt="Previous">
+        </button>
+        <div class="deals-items">
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/TN_1.jpg" alt="Apple iPad Pro M4 (11')" />
+                </div>
+                <div class="deal-title">
+                    <h3>Apple iPad Pro M4 (11')</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱72,990 <span class="old-price">₱78,990</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱6,000 OFF (8%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/TN_2.png" alt="HP Envy x360 (2025, OLED 13th Gen i7)" />
+                </div>
+                <div class="deal-title">
+                    <h3>HP Envy x360 (2025, OLED 13th Gen i7)</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱68,999 <span class="old-price">₱74,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱6,000 OFF (8%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/TN_3.png" alt="Google Pixel 9 Pro" />
+                </div>
+                <div class="deal-title">
+                    <h3>Google Pixel 9 Pro</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱52,999 <span class="old-price">₱57,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱5,000 OFF (9%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="deal-item">
+                <div class="deal-image">
+                    <img src="Assets/Images/TN_4.png" alt="Razer Kishi Ultra (Mobile Controller)" />
+                </div>
+                <div class="deal-title">
+                    <h3>Razer Kishi Ultra (Mobile Controller)</h3>
+                </div>
+                <div class="deal-bottom">
+                    <div class="deal-price">
+                        <p class="price">₱6,299 <span class="old-price">₱6,999</span></p>
+                    </div>
+                    <div class="deal-discount">
+                        <p class="discount">₱700 OFF (10%)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="deals-arrow right" aria-label="Next trending item">
+            <img src="https://img.icons8.com/ios-filled/50/000000/chevron-right.png" alt="Next">
+        </button>
+    </div>
+</section>
+
+    <script src="techmart.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>PAYMENT</h3>
+                <ul>
+                    <li>GCash</li>
+                    <li>Paymaya</li>
+                    <li>BDO</li>
+                    <li>Union Bank</li>
+                    <li>Alipay</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li>Buyer Safety Centre</li>
+                    <li>FAQ</li>
+                    <li>Delivery</li>
+                    <li>GCash Return Policy</li>
+                    <li>Digital Services</li>
+                    <li>Bluck Purchase</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>DOWNLOAD &amp; CONNECT WITH US</h3>
+                <div class="download-buttons">
+                    <a href="https://apps.apple.com/us/story/id1302444839" aria-label="Download on the App Store">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" />
+                    </a>
+                    <a href="https://play.google.com/store/games?hl=en" aria-label="Get it on Google Play">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+                    </a>
+                </div>
+                <h3>CONNECT WITH US</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook" /></a>
+                    <a href="#" aria-label="Twitter"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter" /></a>
+                    <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" /></a>
+                    <a href="#" aria-label="YouTube"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube" /></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,576 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #eee;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    background-color: #111;
+    border-bottom: 1px solid #222;
+}
+
+/* Top header bar */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #00ffff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 250px;
+    height: 106px;
+    margin-right: 8px;
+}
+
+/* Search bar */
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    background-color: #222;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #eee;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+}
+
+.search-bar button {
+    background-color: #00ffff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* User actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-signup {
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-signup:hover {
+    color: #00ffff;
+}
+
+/* Cart button */
+.cart-button {
+    background-color: #00ffff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #000;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+    background-color: #00cccc;
+}
+
+.cart-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.cart-count {
+    background-color: #000;
+    color: #00ffff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+}
+
+/* Navigation bar */
+.category-nav {
+    background-color: #222;
+    padding: 8px 20px;
+}
+
+.category-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.category-nav ul li a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.category-nav ul li a:hover {
+    color: #00ffff;
+}
+
+/* Hero Carousel Styles */
+.hero-carousel {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 400px; /* Set fixed height for plain colored containers */
+    width: 100%; /* Ensure full width */
+}
+
+.slide img {
+    display: none; /* Hide images since we use plain colored containers */
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 100px; /* Increased left margin to avoid overlap with left arrow */
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 50%;
+}
+
+.slide-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00cccc;
+}
+
+.hero-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-arrow {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Added to center horizontally */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.hero-arrow.left {
+    left: 10px;
+}
+
+.hero-arrow.right {
+    right: 10px;
+}
+
+.hero-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-arrow img {
+    width: 20px;
+    height: 20px;
+}
+
+.hero-pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #00ffff;
+}
+
+/* Latest Deals Section */
+.latest-deals, .recommended-for-you, .newly-released, .trending-now {
+    background-color: #222;
+    padding: 20px 40px;
+    color: #eee;
+}
+
+.deal-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 1.2;
+}
+
+.deals-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.deals-header h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.view-more {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.view-more:hover {
+    color: #00cccc;
+}
+
+.deals-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.deals-arrow {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.deals-arrow.left {
+    margin-right: 10px;
+}
+
+.deals-arrow.right {
+    margin-left: 10px;
+}
+
+.deals-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.deals-arrow img {
+    width: 18px;
+    height: 18px;
+}
+
+.deals-items {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    flex: 1;
+}
+
+.deal-item {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px;
+    width: 240px; /* Increased width for bigger product card */
+    height: 280px; /* Added height for bigger product card */
+    text-align: left;
+    color: #eee;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.deal-item h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+    word-wrap: break-word; /* Allow line break for long product names */
+    white-space: normal;
+}
+
+.deal-item img {
+    width: 100%;
+    height: auto;
+    max-height: 120px; /* Limit image height to reduce card size */
+    object-fit: contain; /* Maintain aspect ratio */
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.deal-item h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-weight: 400;
+    margin-left: 6px;
+    font-size: 0.9rem;
+}
+
+.discount {
+    color: #00ff99;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Scrollbar styling for deals-items */
+.deals-items::-webkit-scrollbar {
+    height: 6px;
+}
+
+.deals-items::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.deals-items::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .latest-deals {
+        padding: 15px 20px;
+    }
+
+    .deal-item {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .deals-arrow {
+        width: 28px;
+        height: 28px;
+    }
+
+    .deals-arrow img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .deal-item {
+        min-width: 120px;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    min-width: 180px;
+}
+
+.footer-column h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00ffff;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.download-buttons a img {
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.download-buttons a img:hover {
+    opacity: 0.8;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+    filter: brightness(0) invert(0.6);
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+}
